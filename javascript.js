@@ -11,16 +11,21 @@ var punchlines = [
   'That\'s my toe sis!',
 ];
 
-var randomNumber;
-var joke;
+var randomNumber = 0;
+var thing;
+
 function random(){
-  var randomNumber = Math.floor(Math.random() * (quotes.length));
-  console.log(quotes[randomNumber]);
-};
+  randomNumber = Math.floor(Math.random() * (quotes.length));
+  return randomNumber;
+  };
+
 function newQuote(){
-  document.getElementById('quoteDisplay').innerHTML = quotes[randomNumber];
+  thing = random();
+  console.log(thing);
+  document.getElementById('quoteDisplay').innerHTML = quotes[thing];
+
 };
 function punchline(){
-  document.getElementById('quoteDisplay').innerHTML = punchlines[randomNumber];
+
+  document.getElementById('quoteDisplay').innerHTML = punchlines[thing];
 };
-var randomNumber = Math.floor(Math.random() * (quotes.length));
